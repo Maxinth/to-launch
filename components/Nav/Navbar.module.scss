@@ -1,0 +1,22 @@
+@import "styles/colors.modules.scss";
+
+.navContainer {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  box-shadow: 1px 1px 10px ghostwhite;
+  display: flex;
+  justify-content: flex-start;
+  .MobileLogo {
+    display: block;
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  .imgCont {
+    display: none;
+    @media (min-width: 900px) {
+      display: block;
+    }
+  }
+}
