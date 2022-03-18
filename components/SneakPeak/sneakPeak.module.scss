@@ -1,9 +1,18 @@
 @import "styles/colors.module.scss";
 
+.container {
+  // background-image: url("../../public/images/home-shape.png");
+  align-self: center;
+  .heading {
+    color: $base-blue;
+  }
+}
 .offers {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  text-transform: capitalize;
+  line-height: 1.7;
 }
 
 // animations
@@ -133,4 +142,6 @@
   color: $base-green-100;
   font-size: 1.2rem;
   margin-right: 0.3rem;
+  position: relative;
+  top: -5px;
 }

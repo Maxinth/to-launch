@@ -2,7 +2,8 @@ import styles from "./sneakPeak.module.scss";
 
 const SneakPeak = () => {
   return (
-    <div>
+    <div className={styles.container}>
+      <h3 className={styles.heading}>Sneak peek of what to expect</h3>
       <ol>
         <li className={styles.offers}>
           <span className={styles.animateFire}>•</span> Free digital products

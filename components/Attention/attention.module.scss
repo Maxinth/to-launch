@@ -2,9 +2,34 @@
 
 .container {
   width: 100%;
-
+  transition: all 0.2s;
+  margin-bottom: 1rem;
   .mainHeading {
     font-size: 3rem;
     color: $base-blue;
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+    text-align: center;
+    @media (min-width: 600px) {
+      text-align: left;
+    }
+    @media (min-width: 900px) {
+      font-size: 4rem;
+    }
+  }
+  .subHeading {
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    font-weight: normal;
+    max-width: 600px;
+    // font-style: italic;
+    // @media (min-width: 900px) {
+    //   font-size: 2.2rem;
+    // }
+  }
+
+  @media (min-width: 600px) {
+    margin-right: 0.5rem;
+    margin-bottom: unset;
   }
 }

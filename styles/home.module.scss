@@ -2,17 +2,50 @@
 
 .container {
   width: 100%;
-  height: 100vh;
+  // background-image: url("../public/images/home-shape.png");
+  background-image: url("../public/images/partial-general-bg.svg");
+  // background-image: url("../public/images/banner.png");
+  background-position: -1% -3%;
+  // background-position: -200% 43%;
+  background-repeat: repeat;
   overflow: hidden;
-  font-family: Inter sans-serif;
+  font-family: Inter, sans-serif;
+  @media (min-width: 1200px) {
+    height: 100vh;
+  }
 }
+// .try {
+//   position: relative;
+// }
 
 .doFlex {
   display: flex;
+  position: relative;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding: 1rem 2rem;
+  transition: all 0.2s;
+  @media (min-width: 600px) {
+    padding: 0.5rem 4rem;
+    flex-direction: row;
+
+    margin-top: 1rem;
+  }
+  @media (min-width: 900px) {
+    padding: 0.5rem 10.31rem;
+  }
+  .bannerImg {
+    position: absolute;
+    background-image: url("../public/images/banner.png");
+    // background-color: red;
+    top: -80px;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
 }
 // .container {
 //   padding: 0 2rem;

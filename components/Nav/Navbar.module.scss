@@ -5,7 +5,11 @@
   padding: 0.5rem 2rem;
   box-shadow: 1px 1px 10px ghostwhite;
   display: flex;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
   justify-content: flex-start;
+  transition: all 0.2s;
   .MobileLogo {
     display: block;
     @media (min-width: 900px) {
@@ -18,5 +22,9 @@
     @media (min-width: 900px) {
       display: block;
     }
+  }
+
+  @media (min-width: 900px) {
+    padding: 0.5rem 10.31rem;
   }
 }
