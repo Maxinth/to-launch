@@ -2,9 +2,13 @@
 
 .container {
   // background-image: url("../../public/images/home-shape.png");
-  align-self: center;
+  align-self: flex-start;
+  // align-self: center;
   .heading {
     color: $base-blue;
+  }
+  @media (min-width: 1200px) {
+    margin: 5rem 0;
   }
 }
 .offers {
@@ -13,6 +17,9 @@
   align-items: flex-start;
   text-transform: capitalize;
   line-height: 1.7;
+  font-size: 0.9rem;
+  color: #333;
+  // font-weight: bold;
 }
 
 // animations

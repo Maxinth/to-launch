@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./attention.module.scss";
+import Form from "./Form";
+
 const MainAttention = () => {
   return (
     <section className={styles.container}>
@@ -12,6 +14,10 @@ const MainAttention = () => {
         sell all your content and digital products across borders, and massively
         earn without any hassle?
       </h2>
+      <p className={styles.animateFlicker}>
+        Submit your details to join the wait-list
+      </p>
+      <Form />
     </section>
   );
 };
