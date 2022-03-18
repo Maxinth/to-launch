@@ -1,0 +1,10 @@
+@import "styles/colors.module.scss";
+
+.container {
+  width: 100%;
+
+  .mainHeading {
+    font-size: 3rem;
+    color: $base-blue;
+  }
+}
