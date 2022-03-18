@@ -4,8 +4,14 @@
   // background-image: url("../../public/images/home-shape.png");
   align-self: flex-start;
   // align-self: center;
+  margin-top: 1.5rem;
+  transition: all 0.2s;
   .heading {
     color: $base-blue;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: unset;
   }
   @media (min-width: 1200px) {
     margin: 5rem 0;

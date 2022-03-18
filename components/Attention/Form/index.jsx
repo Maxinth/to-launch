@@ -4,7 +4,7 @@ import styles from "./form.module.scss";
 
 const Form = () => {
   return (
-    <form>
+    <form className={styles.formMain}>
       <div className={styles.formBox}>
         <InputBox type="text" placeholder="Enter your First Name" />
         <InputBox type="mail" placeholder="Enter your Mail Address" />

@@ -1,5 +1,27 @@
 @import "styles/colors.module.scss";
 
+.formMain {
+  .btn {
+    background-color: $base-blue;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    // text-transform: uppercase;
+    // font-weight: bolder;
+    &:hover {
+      color: $base-blue;
+      background-color: #fff;
+      border: 1px solid $base-blue;
+    }
+  }
+}
 .formBox {
   // max-width: 290px;
   // margin: 0 auto;
