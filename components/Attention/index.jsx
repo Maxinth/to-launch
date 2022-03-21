@@ -1,8 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import styles from "./attention.module.scss";
 import Form from "./Form";
 
 const MainAttention = () => {
+  const [doFlicker, setDoFlicker] = useState(true);
+
+  const stopFlicker = () => setDoFlicker(false);
   return (
     <section className={styles.container}>
       <h1 className={styles.mainHeading}>
@@ -14,10 +17,10 @@ const MainAttention = () => {
         sell all your content and digital products across borders, and massively
         earn without any hassle?
       </h2>
-      <p className={styles.animateFlicker}>
+      <p className={doFlicker ? styles.animateFlicker : styles.stopFlicker}>
         Submit your details to join the wait-list
       </p>
-      <Form />
+      <Form stopFlicker={stopFlicker} />
     </section>
   );
 };

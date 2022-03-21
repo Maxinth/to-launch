@@ -1,20 +1,23 @@
-// import {useState} from "react";
 import InputBox from "./InputBox";
 import styles from "./form.module.scss";
-// import cogoToast from "cogo-toast";
+import cogoToast from "cogo-toast";
 import { WaitListSchema } from "../../../validations";
 import { isAnEmpytyObject } from "../../../utils";
 import { useFormik } from "formik";
 import { FormError } from "./FormError";
 
-const Form = () => {
+const Form = ({ stopFlicker }) => {
   const options = {
-    hideAfter: "5",
+    hideAfter: 5,
     position: "top-right",
   };
-  const handleSubmit = async (values) => {
-    // cogoToast.success("You have been added to the wait-list", options);
-    /**Destructuring the values below so that data used for validation on client side not required by the endpoint isn't passed along */
+
+  const initialValues = {
+    Email: "",
+    FirstName: "",
+  };
+
+  const handleSubmit = (values) => {
     const { Email, FirstName } = values;
     const data = { Email, FirstName };
 
@@ -23,27 +26,31 @@ const Form = () => {
       formData.append(value, data[value]);
     }
 
-    await console.log("make request here!");
-    console.log(formData);
-    // cogoToast.success("You have been added to the wait-list", options);
-  };
+    console.log("make request here!");
+    console.log(formik.values);
 
-  const initialValues = {
-    Email: "",
-    FirstName: "",
+    if (formik.values.Email && formik.values.FirstName) {
+      cogoToast.success(
+        `Congrats ${formik.values.firstName}, you have just been added to the wait-list`,
+        options
+      );
+      stopFlicker();
+      setFieldValue("Email", "");
+      setFieldValue("FirstName", "");
+    }
   };
 
   const formik = useFormik({
     initialValues,
     onSubmit: handleSubmit,
     validationSchema: WaitListSchema,
-    validateOnChange: true,
+    validateOnChange: false,
   });
 
-  const { errors } = formik;
+  const { errors, setFieldValue } = formik;
   // useEffect(() => {
   //   if (Email) setFieldValue("Email", Email);
-  // }, [Email]);
+  // }, [Email]
   return (
     <>
       {!isAnEmpytyObject(errors) && <FormError errors={errors} />}
@@ -53,18 +60,16 @@ const Form = () => {
             type="text"
             placeholder="Enter your First Name"
             name="FirstName"
-            value={formik.values.FirstName}
             onChange={formik.handleChange}
           />
           <InputBox
             type="mail"
             placeholder="Enter your Mail Address"
             name="Email"
-            value={formik.values.Email}
             onChange={formik.handleChange}
           />
         </div>
-        <button type="button" className={styles.btn}>
+        <button type="submit" className={styles.btn}>
           Join the wait-list
         </button>
       </form>

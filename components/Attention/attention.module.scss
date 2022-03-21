@@ -116,3 +116,19 @@
   // }
   // margin-bottom: 0.5rem;
 }
+
+.stopFlicker {
+  // webkit-animation: unset;
+  // -moz-animation: unset;
+  // -o-animation: unset;
+  animation: unset;
+  // text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 1.2rem;
+  font-size: 2rem;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  color: $base-green-100;
+  font-weight: bold;
+}

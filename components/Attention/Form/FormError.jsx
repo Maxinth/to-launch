@@ -1,4 +1,4 @@
-import styles from "./FormError.module.scss";
+import styles from "./formError.module.scss";
 
 export const FormError = ({ errors }) => {
   const error = Object.values(errors)?.map((data) => data);
