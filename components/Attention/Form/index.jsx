@@ -31,7 +31,7 @@ const Form = ({ stopFlicker }) => {
 
     // feedback
     cogoToast.success(
-      `Congrats ${formik.values.FirstName}, you have just been added to the wait-list`,
+      `${formik.values.FirstName}, you have been added to the wait-list`,
       feedBackOptions
     );
   };
