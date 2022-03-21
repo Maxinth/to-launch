@@ -7,14 +7,14 @@ import { useFormik } from "formik";
 import { FormError } from "./FormError";
 
 const Form = ({ stopFlicker }) => {
-  const options = {
+  const feedBackOptions = {
     hideAfter: 5,
     position: "top-right",
   };
 
   const initialValues = {
-    Email: "",
     FirstName: "",
+    Email: "",
   };
 
   const handleSubmit = (values) => {
@@ -26,18 +26,14 @@ const Form = ({ stopFlicker }) => {
       formData.append(value, data[value]);
     }
 
-    console.log("make request here!");
-    console.log(formik.values);
+    //  console.log(formData)
+    stopFlicker();
 
-    if (formik.values.Email && formik.values.FirstName) {
-      cogoToast.success(
-        `Congrats ${formik.values.firstName}, you have just been added to the wait-list`,
-        options
-      );
-      stopFlicker();
-      setFieldValue("Email", "");
-      setFieldValue("FirstName", "");
-    }
+    // feedback
+    cogoToast.success(
+      `Congrats ${formik.values.FirstName}, you have just been added to the wait-list`,
+      feedBackOptions
+    );
   };
 
   const formik = useFormik({
@@ -47,10 +43,8 @@ const Form = ({ stopFlicker }) => {
     validateOnChange: false,
   });
 
-  const { errors, setFieldValue } = formik;
-  // useEffect(() => {
-  //   if (Email) setFieldValue("Email", Email);
-  // }, [Email]
+  const { errors } = formik;
+
   return (
     <>
       {!isAnEmpytyObject(errors) && <FormError errors={errors} />}

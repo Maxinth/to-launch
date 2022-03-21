@@ -72,6 +72,10 @@
     font-size: 0.8rem;
     font-weight: 400;
     transition: all 0.2s;
+
+    &.first {
+      text-transform: capitalize;
+    }
     &::placeholder {
       color: #d9d9d9;
     }

@@ -10,13 +10,7 @@ const SocialIcons = () => {
         const { name, iconSrc, link } = item;
         return (
           <a className={styles.icon} key={name} href={link}>
-            <Image
-              src={iconSrc}
-              width="20"
-              height="20"
-              alt={name}
-              // style={{ color: ` ${color} !important` }}
-            />
+            <Image src={iconSrc} width="20" height="20" alt={name} />
           </a>
         );
       })}

@@ -9,6 +9,7 @@ const InputBox = ({ type, placeholder, name, onChange }) => {
         placeholder={placeholder}
         name={name}
         onChange={onChange}
+        className={name === "FirstName" ? styles.first : ""}
       />
     </div>
   );
