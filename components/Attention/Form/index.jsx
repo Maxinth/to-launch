@@ -1,10 +1,11 @@
 // import {useState} from "react";
 import InputBox from "./InputBox";
 import styles from "./form.module.scss";
-import cogoToast from "cogo-toast";
+// import cogoToast from "cogo-toast";
 import { WaitListSchema } from "../../../validations";
 import { isAnEmpytyObject } from "../../../utils";
 import { useFormik } from "formik";
+import { FormError } from "./FormError";
 
 const Form = () => {
   const options = {
@@ -36,7 +37,7 @@ const Form = () => {
     initialValues,
     onSubmit: handleSubmit,
     validationSchema: WaitListSchema,
-    validateOnChange: false,
+    validateOnChange: true,
   });
 
   const { errors } = formik;
@@ -45,13 +46,25 @@ const Form = () => {
   // }, [Email]);
   return (
     <>
-      {/* {!isAnEmpytyObject(errors) && <FormError errors={errors} />} */}
-      <form className={styles.formMain}>
+      {!isAnEmpytyObject(errors) && <FormError errors={errors} />}
+      <form className={styles.formMain} onSubmit={formik.handleSubmit}>
         <div className={styles.formBox}>
-          <InputBox type="text" placeholder="Enter your First Name" />
-          <InputBox type="mail" placeholder="Enter your Mail Address" />
+          <InputBox
+            type="text"
+            placeholder="Enter your First Name"
+            name="FirstName"
+            value={formik.values.FirstName}
+            onChange={formik.handleChange}
+          />
+          <InputBox
+            type="mail"
+            placeholder="Enter your Mail Address"
+            name="Email"
+            value={formik.values.Email}
+            onChange={formik.handleChange}
+          />
         </div>
-        <button type="button" className={styles.btn} onClick={handleSubmit}>
+        <button type="button" className={styles.btn}>
           Join the wait-list
         </button>
       </form>

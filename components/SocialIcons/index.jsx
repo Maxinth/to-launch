@@ -7,7 +7,7 @@ const SocialIcons = () => {
   return (
     <div className={styles.container}>
       {data?.map((item) => {
-        const { name, iconSrc, link, color } = item;
+        const { name, iconSrc, link } = item;
         return (
           <a className={styles.icon} key={name} href={link}>
             <Image
@@ -15,7 +15,7 @@ const SocialIcons = () => {
               width="20"
               height="20"
               alt={name}
-              style={{ color: ` ${color} !important` }}
+              // style={{ color: ` ${color} !important` }}
             />
           </a>
         );
