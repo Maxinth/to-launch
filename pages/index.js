@@ -11,7 +11,6 @@ export default function Home() {
       <Navbar />
       <section className={styles.doFlex}>
         <MainAttention />
-
         <SneakPeak />
       </section>
     </div>

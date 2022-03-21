@@ -6,7 +6,7 @@ const MainAttention = () => {
   return (
     <section className={styles.container}>
       <h1 className={styles.mainHeading}>
-        Be the FIRST <br />
+        Be the <span className={styles.green}>FIRST</span> <br />
         to Know!
       </h1>
       <h2 className={styles.subHeading}>

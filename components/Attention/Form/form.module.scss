@@ -20,6 +20,12 @@
       background-color: #fff;
       border: 1px solid $base-blue;
     }
+
+    &:active {
+      background-color: $base-green-100;
+      color: #fff;
+      border: 1px solid transparent;
+    }
   }
 }
 .formBox {
