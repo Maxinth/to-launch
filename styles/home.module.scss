@@ -5,13 +5,14 @@
   // background-image: url("../public/images/home-shape.png");
   background-image: url("../public/images/partial-general-bg.svg");
   // background-image: url("../public/images/banner.png");
-  background-position: 50% -250%;
+  background-position: 100% 100%;
   // background-position: -200% 43%;
   background-repeat: repeat;
   overflow: hidden;
   font-family: Inter, sans-serif;
   @media (min-width: 1200px) {
     height: 100vh;
+    background-position: 50% -250%;
   }
 }
 // .try {

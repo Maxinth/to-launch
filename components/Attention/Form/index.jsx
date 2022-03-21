@@ -6,7 +6,7 @@ import { isAnEmpytyObject } from "../../../utils";
 import { useFormik } from "formik";
 import { FormError } from "./FormError";
 
-const Form = ({ stopFlicker }) => {
+const Form = () => {
   const feedBackOptions = {
     hideAfter: 5,
     position: "top-right",
@@ -27,7 +27,6 @@ const Form = ({ stopFlicker }) => {
     }
 
     //  console.log(formData)
-    stopFlicker();
 
     // feedback
     cogoToast.success(
