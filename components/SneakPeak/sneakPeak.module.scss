@@ -8,6 +8,8 @@
   transition: all 0.2s;
   .heading {
     color: $base-blue;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
   }
 
   @media (min-width: 768px) {

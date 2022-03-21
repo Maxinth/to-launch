@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   border: 1px solid red;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 3.8rem;
+  .icon {
+    margin-right: 0.5rem;
+  }
+}
