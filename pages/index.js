@@ -3,23 +3,15 @@ import { Navbar } from "components/Nav";
 import MainAttention from "components/Attention";
 import SneakPeak from "components/SneakPeak";
 import SocialIcons from "components/SocialIcons";
-// import FeedBackModal from "components/FeedbackModal";
-// import { useState } from "react";
 import "antd/dist/antd.css";
-// import { Modal } from "antd";
+import { Modal } from "antd";
 
 export default function Home() {
-  // const [isModalVisible, setIsModalVisible] = useState(false);
-  // const showModal = () => {
-  //   setIsModalVisible(true);
-  // };
-
-  // const closeModal = () => {
-  //   setIsModalVisible(false);
-  // };
   function success() {
     Modal.success({
-      content: "some messages...some messages...",
+      title: <Title />,
+      content: <Content />,
+      width: 700,
     });
   }
   return (
@@ -29,8 +21,18 @@ export default function Home() {
         <MainAttention showModal={success} />
         <SneakPeak />
       </section>
-      {/* <FeedBackModal visible={isModalVisible} closeModal={closeModal} /> */}
       <SocialIcons />
     </div>
   );
 }
+
+const Title = () => (
+  <h1 className={styles.heading}>
+    Hurray! You&rsquo;re on the exclusive wait-list.
+  </h1>
+);
+const Content = () => (
+  <p className={styles.content}>
+    You&rsquo;ll be alerted immediately KreateSell launches.
+  </p>
+);

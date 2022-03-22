@@ -4,3 +4,20 @@
   box-sizing: border-box;
   font-family: Inter, sans-serif;
 }
+
+.ant-modal-content {
+  background-image: url("../public/images/partial-general-bg.svg") !important;
+  background-position: 8% 20%;
+  height: 100%;
+  background-repeat: repeat-x;
+  border-radius: 5px !important;
+  box-shadow: 1px 2px 3px grey;
+  /* border: 1px solid red !important; */
+  /* background-color: unset !important; */
+}
+
+.ant-modal-confirm-body .anticon.anticon-check-circle {
+  position: relative;
+  /* top: 20px; */
+  font-size: 3rem;
+}

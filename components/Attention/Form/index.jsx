@@ -63,9 +63,9 @@ const Form = ({ showModal }) => {
             onChange={formik.handleChange}
           />
         </div>
-        <Button onClick={showModal} type="submit" className={styles.btn}>
+        <button type="submit" className={styles.btn}>
           Join the wait-list
-        </Button>
+        </button>
       </form>
     </>
   );
