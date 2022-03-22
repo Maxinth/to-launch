@@ -1,16 +1,17 @@
 import InputBox from "./InputBox";
 import styles from "./form.module.scss";
-import cogoToast from "cogo-toast";
+// import cogoToast from "cogo-toast";
 import { WaitListSchema } from "../../../validations";
 import { isAnEmpytyObject } from "../../../utils";
 import { useFormik } from "formik";
 import { FormError } from "./FormError";
+import { Modal, Button } from "antd";
 
-const Form = () => {
-  const feedBackOptions = {
-    hideAfter: 5,
-    position: "top-right",
-  };
+const Form = ({ showModal }) => {
+  // const feedBackOptions = {
+  //   hideAfter: 5,
+  //   position: "top-right",
+  // };
 
   const initialValues = {
     FirstName: "",
@@ -26,13 +27,13 @@ const Form = () => {
       formData.append(value, data[value]);
     }
 
-    //  console.log(formData)
+    showModal();
 
     // feedback
-    cogoToast.success(
-      `${formik.values.FirstName}, you have been added to the wait-list`,
-      feedBackOptions
-    );
+    // cogoToast.success(
+    //   `${formik.values.FirstName}, you have been added to the wait-list`,
+    //   feedBackOptions
+    // );
   };
 
   const formik = useFormik({
@@ -62,9 +63,9 @@ const Form = () => {
             onChange={formik.handleChange}
           />
         </div>
-        <button type="submit" className={styles.btn}>
+        <Button onClick={showModal} type="submit" className={styles.btn}>
           Join the wait-list
-        </button>
+        </Button>
       </form>
     </>
   );

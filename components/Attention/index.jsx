@@ -1,7 +1,7 @@
 import styles from "./attention.module.scss";
 import Form from "./Form";
 
-const MainAttention = () => {
+const MainAttention = (props) => {
   return (
     <section className={styles.container}>
       <h1 className={styles.mainHeading}>
@@ -16,7 +16,7 @@ const MainAttention = () => {
       <p className={styles.stopFlicker}>
         Submit your details to join the wait-list
       </p>
-      <Form />
+      <Form {...props} />
     </section>
   );
 };
