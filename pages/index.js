@@ -33,6 +33,8 @@ const Title = () => (
 );
 const Content = () => (
   <p className={styles.content}>
-    You&rsquo;ll be alerted immediately KreateSell launches.
+    You&rsquo;ll be alerted immediately{" "}
+    <span className={styles.blue}>Kreate</span>
+    <span className={styles.green}>Sell</span> launches.
   </p>
 );

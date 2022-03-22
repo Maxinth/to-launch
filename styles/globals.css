@@ -20,4 +20,27 @@
   position: relative;
   /* top: 20px; */
   font-size: 3rem;
+  /* color: #0072ef; */
+}
+
+.ant-modal-content .ant-modal-confirm-btn {
+  text-align: center !important;
+}
+.ant-btn.ant-btn-primary {
+  border: 1px solid transparent;
+  background-color: #0072ef !important;
+  transition: all 0.2s;
+  border-radius: 5px !important;
+}
+
+.ant-btn.ant-btn-primary:hover {
+  border: 1px solid #0072ef !important;
+  color: #fff !important;
+  background-color: #0072ef !important;
+}
+
+.ant-btn.ant-btn-primary:active {
+  background-color: #2dc071 !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
 }

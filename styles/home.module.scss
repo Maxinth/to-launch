@@ -1,3 +1,4 @@
+@import "./colors.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 .container {
@@ -53,6 +54,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1.2rem;
-  margin-left: 1.3rem;
+  font-size: 1rem;
+  margin-left: 1.7rem;
+  .green {
+    color: $base-green-100;
+    margin-right: 0.3rem;
+  }
+  .blue {
+    color: $base-blue;
+    font-weight: bold;
+    margin-left: 0.3rem;
+  }
 }
