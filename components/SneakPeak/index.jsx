@@ -6,31 +6,11 @@ const SneakPeak = () => {
     <div className={styles.container}>
       <h3 className={styles.heading}>Sneak peek of what to expect</h3>
       <ol>
-        {/* <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> Free digital products
-          upload.
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> 21 supported currencies.
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> Earn massively from
-          borderless sales.
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> Army of affiliate
-          marketers to sell your digital product(s) for you.
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> 24/7 customer support.{" "}
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> Automated done-for-you
-          payment and follow up processes.
-        </li>
-        <li className={styles.offers}>
-          <span className={styles.animateFire}>•</span> And so much more...
-        </li> */}
+        {data?.map((item, index) => (
+          <li className={styles.offers} key={index}>
+            <span className={styles.animateFire}>•</span> {item}
+          </li>
+        ))}
       </ol>
     </div>
   );
