@@ -1,11 +1,12 @@
 import styles from "./sneakPeak.module.scss";
+import { data } from "./data";
 
 const SneakPeak = () => {
   return (
     <div className={styles.container}>
       <h3 className={styles.heading}>Sneak peek of what to expect</h3>
       <ol>
-        <li className={styles.offers}>
+        {/* <li className={styles.offers}>
           <span className={styles.animateFire}>•</span> Free digital products
           upload.
         </li>
@@ -29,7 +30,7 @@ const SneakPeak = () => {
         </li>
         <li className={styles.offers}>
           <span className={styles.animateFire}>•</span> And so much more...
-        </li>
+        </li> */}
       </ol>
     </div>
   );
